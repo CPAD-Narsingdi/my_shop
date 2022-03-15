@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:math_expressions/math_expressions.dart';
 
 import 'FormValidation.dart';
 import 'Home.dart';
@@ -7,7 +6,6 @@ import 'Register.dart';
 
 
 class Login extends StatefulWidget {
-  const Login({Key? key}) : super(key: key);
 
   @override
   _LoginState createState() => _LoginState();
@@ -72,7 +70,6 @@ class _LoginState extends State<Login> {
 
   var formValidator= FormValidation();
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -88,7 +85,7 @@ class _LoginState extends State<Login> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     fontSize: 50,
-                    color: Colors.blue,
+                    color: Colors.teal,
                     fontWeight: FontWeight.bold),
               ),
               SizedBox(
@@ -148,7 +145,7 @@ class _LoginState extends State<Login> {
                   }
                 },
                 height: 50,
-                color: Colors.blue,
+                color: Colors.teal,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50)),
                 child: Text(
@@ -175,13 +172,7 @@ class _LoginState extends State<Login> {
                   ),
                   TextButton(
                     onPressed: () {
-                      // Navigator.push(context, MaterialPageRoute(builder: (_) => Register()));
-                      Parser p = new Parser();
-                      Expression exp = p.parse("(5+5)*5.76555");
-                      ContextModel cm = ContextModel();
-
-                      String result = exp.evaluate(EvaluationType.REAL, cm).toString();  // if context is not available replace it with null.
-                      print(result);
+                      Navigator.push(context, MaterialPageRoute(builder: (_) => Register()));
                     },
                     child: Text(
                       "Register Now",

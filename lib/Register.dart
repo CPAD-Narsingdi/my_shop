@@ -6,7 +6,6 @@ import 'Home.dart';
 
 
 class Register extends StatefulWidget {
-  const Register({Key? key}) : super(key: key);
 
   @override
   _RegisterState createState() => _RegisterState();
